@@ -4,25 +4,23 @@ Repositório do projeto final da disciplina **IMD1152 - Coleta e Raspagem de Dad
 
 ## Problema investigado
 
-O objetivo do projeto é analisar a evolução dos focos de queimadas no Brasil entre dezembro de 2025 e novembro de 2026 e relacioná-la ao avanço do El Niño em 2026, comparando esse período com o ciclo anterior (dezembro de 2024 a novembro de 2025). A análise observa como o número de focos, os dias sem chuva, o risco de fogo, a precipitação e a intensidade das queimadas (FRP) variam por mês, bioma e região do país.
+O objetivo do projeto é analisar a evolução dos focos de queimadas no Brasil entre dezembro de 2025 e novembro de 2026 e relacioná-la ao avanço do El Niño em 2026, comparando esse período com o ciclo anterior (dezembro de 2024 a novembro de 2025). A análise observa como o número de focos, os dias sem chuva, o risco de fogo, a precipitação e a intensidade das queimadas (FRP) variam por mês, bioma e estado.
 
-## Fontes e métodos de coleta
+## Fontes e formatos dos dados
 
 Todos os dados utilizados são públicos, gratuitos e não contêm informações pessoais ou sensíveis (em conformidade com princípios éticos e LGPD):
 
-| Fonte | Conteúdo | Método de coleta | Referência / Link |
+| Fonte | Conteúdo | Formato | Arquivo |
 | :--- | :--- | :--- | :--- |
-| **INPE (BDQueimadas)** | 858.405 focos no Brasil (`30/11/2024` a `30/11/2025`, satélite `NOAA-20`) | Arquivo semiestruturado (GeoJSON) | `dados/bdqueimadas_2024-11-30_2025-11-30.geojson` |
-| **INPE (BDQueimadas)** | 780.217 focos no Brasil (`01/12/2025` a `18/11/2026`, satélite `NOAA-20`) | Arquivo estruturado (CSV) | `dados/bdqueimadas_2025-12-01_2026-11-19.csv` |
-| **NOAA CPC** | Índices oficiais do El Niño (RONI / ONI) de 2024 a 2026 | Web Scraping (HTML) | https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso/roni/ |
-| **IBGE (Localidades)** | 27 estados brasileiros com sigla (UF) e macro-região | Consumo de API REST (JSON) | https://servicodados.ibge.gov.br/api/v1/localidades/estados |
+| **INPE (BDQueimadas)** | 858.405 focos no Brasil (`30/11/2024` a `30/11/2025`, satélite `NOAA-20`) | Semiestruturado (GeoJSON) | `dados/bdqueimadas_2024-11-30_2025-11-30.geojson` |
+| **INPE (BDQueimadas)** | 780.217 focos no Brasil (`01/12/2025` a `18/11/2026`, satélite `NOAA-20`) | Estruturado (CSV) | `dados/bdqueimadas_2025-12-01_2026-11-19.csv` |
 
 ## Estrutura do repositório
 
 ```text
 .
-├── dados/        # Bases brutas do INPE (versionadas com Git LFS) e arquivos auxiliares gerados
-├── notebooks/    # Notebooks (.ipynb) de coleta, limpeza, integração, preparo e análise
+├── dados/        # Bases do INPE em GeoJSON e CSV (versionadas com Git LFS)
+├── notebooks/    # Notebooks (.ipynb) de leitura, limpeza, integração, preparo e análise
 ├── .gitattributes
 ├── .gitignore
 └── README.md
@@ -45,5 +43,8 @@ git lfs pull
 
 ## Integrantes
 
-- Hugo Vinícius
-- [Adicionar demais integrantes]
+- ERIK SILVA DE MEDEIROS
+- MARIANA TIMBÓ DE OLIVEIRA
+- GABRIEL COSTA LIMA DANTAS
+- HUGO VINICIUS DA SILVA FIGUEIREDO
+
