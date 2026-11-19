@@ -1,0 +1,2 @@
+dados/*.geojson filter=lfs diff=lfs merge=lfs -text
+dados/bdqueimadas_*.csv filter=lfs diff=lfs merge=lfs -text
