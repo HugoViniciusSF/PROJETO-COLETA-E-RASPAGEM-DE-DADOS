@@ -1,8 +1,18 @@
-# Leitura e análise dos dados do notebook 01.
+# Leitura, manipulação e armazenamento de dados.
 pandas
+numpy
 geopandas
 pyogrio
+pyarrow
 
-# Execução local do notebook no Jupyter ou no VS Code.
+# Pré-processamento, balanceamento e seleção de atributos.
+scikit-learn
+imbalanced-learn
+
+# Visualização de dados.
+matplotlib
+seaborn
+
+# Execução local dos notebooks no Jupyter ou no VS Code.
 notebook
 ipykernel
