@@ -14,17 +14,32 @@ Todos os dados utilizados são públicos, gratuitos e não contêm informações
 | :--- | :--- | :--- | :--- |
 | **INPE (BDQueimadas)** | 858.405 focos no Brasil (`30/11/2024` a `30/11/2025`, satélite `NOAA-20`) | Semiestruturado (GeoJSON) | `dados/bdqueimadas_2024-11-30_2025-11-30.geojson` |
 | **INPE (BDQueimadas)** | 780.217 focos no Brasil (`01/12/2025` a `18/11/2026`, satélite `NOAA-20`) | Estruturado (CSV) | `dados/bdqueimadas_2025-12-01_2026-11-19.csv` |
+| **NOAA/CPC (RONI)** | Série histórica do índice RONI por trimestre móvel, para apoiar a análise do El Niño | TXT separado por espaços, convertido para CSV | `dados/RONI.ascii.txt` e `dados/roni.csv` |
+
 
 ## Estrutura do repositório
 
 ```text
 .
-├── dados/        # Bases do INPE em GeoJSON e CSV (versionadas com Git LFS)
-├── notebooks/    # Notebooks (.ipynb) de leitura, limpeza, integração, preparo e análise
+├── dados/        # Bases do INPE, dados RONI em TXT/CSV 
+├── notebooks/
+│   ├── 01_leitura_dados_bdqueimadas.ipynb
+│   ├── 01_coleta_leitura_roni.ipynb
+│   └── 02_integracao_limpeza.ipynb
 ├── .gitattributes
 ├── .gitignore
+├── requirements.txt
 └── README.md
 ```
+
+## Notebooks
+
+| Notebook | Objetivo |
+| :--- | :--- |
+| [01_leitura_dados_bdqueimadas.ipynb](notebooks/01_leitura_dados_bdqueimadas.ipynb) | Leitura e exploração inicial dos arquivos GeoJSON e CSV do INPE |
+| [01_coleta_leitura_roni.ipynb](notebooks/01_coleta_leitura_roni.ipynb) | Download do TXT da NOAA, conversão para CSV e exploração inicial do RONI |
+| [02_integracao_limpeza.ipynb](notebooks/02_integracao_limpeza.ipynb) | Integração e limpeza dos dois períodos do INPE, com exportação para `dados/queimadas_limpo.parquet` |
+
 
 ## Como clonar com os arquivos de dados (Git LFS)
 
