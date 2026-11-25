@@ -1,0 +1,8 @@
+# Leitura e análise dos dados do notebook 01.
+pandas
+geopandas
+pyogrio
+
+# Execução local do notebook no Jupyter ou no VS Code.
+notebook
+ipykernel
